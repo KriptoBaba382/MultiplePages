@@ -113,7 +113,7 @@ html {
   content: "";
   width: 0px;
   height: 2px;
-  position: relative;
+  position: absolute;
   bottom: -1px ;
   background-color: #5c8ee6;
   transform: scaleX(1);
@@ -377,6 +377,7 @@ margin-bottom: 0.625rem;
 .header-nav-item {
   height: 100%;
   display: flex;
+  position: relative;
 }
   .header-nav-item:not(:last-child) {
     margin-right: 1rem;
