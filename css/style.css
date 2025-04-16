@@ -91,19 +91,37 @@ html {
 }
 
 .header-nav {
-  flex-basis: 100%;
   display: flex;
+  height: 100%;
+  flex-grow: 1;
+  align-items: center;
   list-style: none;
   padding: 0 3.125rem;
   margin: 0;
 }
 
 .header-nav-limk {
+  display: flex;
+  height: 100%;
+  align-items: center;
   text-decoration: none;
   font-size: 1rem;
   color: inherit;
+  position: relative;
 }
-
+.header-nav-item:after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: -1px ;
+  background-color: #5c8ee6;
+  transform: scaleX(1);
+  transition: width 0.2s;
+}
+.header-nav-item:hover::after {
+  width: 100%;
+}
 .header-phone {
   flex-shrink: 0;
   display: flex;
@@ -295,6 +313,40 @@ html {
   width: 2.5rem;
   margin-right: 1.25rem;
 }
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  flex-basis: 33%;
+  border:  1px solid #ebebf0;
+  position: relative;
+}
+.card-content{
+  padding: 2.5rem 3.125rem;
+}
+.card-title {
+font-weight: 400;
+font-size: 1.75rem;
+line-height: 160%;
+color: #292d33;
+margin-top: 0;
+margin-bottom: 0.625rem;
+}
+.card-text {
+  font-size: 1rem;
+  line-height: 160%;
+  color: #828a99;
+  margin-bottom: 24.625rem;
+}
+.card-image {
+  max-width: 100%;
+  bottom: 0;
+  left:0;
+  right: 0;
+  z-index: 0;
+  position: absolute;
+}
 
 @media (max-width: 1700px) {
   html {
@@ -322,7 +374,11 @@ html {
   .header-nav {
     padding-left: 2rem;
   }
-
+.header-nav-item {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
   .header-nav-item:not(:last-child) {
     margin-right: 1rem;
   }
@@ -351,6 +407,9 @@ html {
   }
   .slider-buttons {
     display: flex;
+  }
+  .card {
+    flex-basis: 50%;
   }
 }
 
@@ -524,6 +583,9 @@ html {
   .header-content {
     padding-top: 3rem;
   }
+  .card {
+    flex-basis: 100%;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -535,4 +597,5 @@ html {
   .header-content {
     padding-top: 2rem;
   }
+  
 }
