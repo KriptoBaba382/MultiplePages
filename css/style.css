@@ -91,19 +91,37 @@ html {
 }
 
 .header-nav {
-  flex-basis: 100%;
   display: flex;
+  height: 100%;
+  flex-grow: 1;
+  align-items: center;
   list-style: none;
   padding: 0 3.125rem;
   margin: 0;
 }
 
 .header-nav-limk {
+  display: flex;
+  height: 100%;
+  align-items: center;
   text-decoration: none;
   font-size: 1rem;
   color: inherit;
+  position: relative;
 }
-
+.header-nav-limk:after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  bottom: -1px ;
+  border-color: #5c8ee6;
+  transform: scaleX(0);
+  transition: width 0.2s;
+}
+.header-nav-limk:hover::after {
+  width: 100%;
+}
 .header-phone {
   flex-shrink: 0;
   display: flex;
@@ -325,6 +343,8 @@ margin-bottom: 0.625rem;
   max-width: 100%;
   bottom: 0;
   left:0;
+  right: 0;
+  z-index: 0;
   position: absolute;
 }
 
@@ -354,7 +374,10 @@ margin-bottom: 0.625rem;
   .header-nav {
     padding-left: 2rem;
   }
-
+.header-nav-item {
+  height: 100%;
+  display: flex;
+}
   .header-nav-item:not(:last-child) {
     margin-right: 1rem;
   }
@@ -383,6 +406,9 @@ margin-bottom: 0.625rem;
   }
   .slider-buttons {
     display: flex;
+  }
+  .card {
+    flex-basis: 50%;
   }
 }
 
@@ -556,6 +582,9 @@ margin-bottom: 0.625rem;
   .header-content {
     padding-top: 3rem;
   }
+  .card {
+    flex-basis: 100%;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -567,4 +596,5 @@ margin-bottom: 0.625rem;
   .header-content {
     padding-top: 2rem;
   }
+  
 }
