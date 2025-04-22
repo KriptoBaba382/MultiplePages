@@ -673,18 +673,63 @@ body {
   }
 
   .container {
-    max-width: 90%;
+    max-width: 95%;
   }
-  .header-title {
-    font-size: 2rem;
+  .header {
+    padding: 5.875rem 0rem 0rem 0.5rem;
+  }
+  .header-button.button.about-company {
+    width: 345px;
+    height: 62px;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 15px 50px;
+    padding: 20px 60px;
+    background-color: #5c8ee5;
+    font-size: 14px;
+    line-height: 22.4;
+    margin-left: 0;
+    margin-bottom: 0;
   }
   .header-content {
-    padding-top: 2rem;
+    padding-top: 41px;
   }
-
+  .header-features {
+    margin-top: 50px;
+  }
   .header-title {
     padding-left: 0px;
     font-size: 4rem;
+    margin-bottom: 16px;
+  }
+  .header-text {
+    margin-left: 0;
+    width: 345px;
+    height: 132px;
+    flex-grow: 0;
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+  .section {
+    margin-top: 100px;
+  }
+  .section-title {
+    font-size: 36px;
+  }
+  .steps-num {
+    font-size: 48px;
+    font-weight: 600;
   }
 }
 
