@@ -644,6 +644,34 @@ body {
   }
 }
 @media (max-width: 576px) {
+  .navbar {
+    height: 68px;
+  }
+  .logo-link {
+    padding: 0px;
+  }
+
+  .logo-link .logo-svg {
+    margin-left: 0px;
+    max-width: none;
+  }
+  .header-button.button {
+    width: 80px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .mobile-menu-toggle {
+    padding: 27px;
+  }
+
+  .header-button.button .button-icon {
+    min-width: 24px;
+  }
+
   .container {
     max-width: 90%;
   }
@@ -652,6 +680,11 @@ body {
   }
   .header-content {
     padding-top: 2rem;
+  }
+
+  .header-title {
+    padding-left: 0px;
+    font-size: 4rem;
   }
 }
 
