@@ -83,11 +83,11 @@ const swiper = new Swiper('.swiper', {
         // when window width is >= 320px
         375: {
           slidesPerView: 1,
-          ccenteredSlides: true,
+          centeredSlides: true,
         },
         576: {
           slidesPerView: 2,
-          ccenteredSlides: true,
+          centeredSlides: true,
           slidesOffsetBefore: 50,
         },
         // when window width is >= 480px

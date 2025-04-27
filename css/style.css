@@ -408,6 +408,9 @@ body {
   line-height: 160%;
   color: #828a99;
 }
+.marks-mobile {
+  display: none;
+}
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
@@ -730,6 +733,23 @@ body {
   .steps-num {
     font-size: 48px;
     font-weight: 600;
+    margin-bottom: -22px;
+  }
+  .steps-text {
+    font-size: 13px;
+    line-height: 22.4px;
+  }
+  .steps-iteam {
+    max-width: 25.625rem;
+  }
+  .steps {
+    gap: 0;
+  }
+  .marks {
+    display: none;
+  }
+  .marks-mobile {
+    display: block;
   }
 }
 
