@@ -382,10 +382,18 @@ body {
   display: flex;
 }
 .cards-auto {
-  display: flex;
-  align-items: center;
+  display: grid;
+  fill: #828a99;
+  grid-template-columns: repeat(1fr, 3);
+  grid-template-rows: 1fr 2fr;
+  grid-column-gap: 50px;
+  grid-template-areas:
+    "logo title title"
+    "logo text text";
   border: 1px solid #ebebf0;
   padding: 0.625rem;
+  flex-basis: 50%;
+  padding: 49px;
 }
 .cards-auto:hover .auto-title {
   color: #5c8ee6;
@@ -394,22 +402,37 @@ body {
   border-color: #5c8ee6;
   cursor: pointer;
 }
+.cards-auto:hover .auto-img {
+  fill: #5c8ee6;
+}
 .auto-title {
   font-weight: 400;
   font-size: 1.75rem;
   line-height: 160%;
   color: #292d33;
-  margin-top: 0;
-  margin-bottom: 0.625rem;
+  margin: 0;
   transition: border 0.2s;
+  grid-area: title;
 }
 .auto-text {
   font-size: 1rem;
   line-height: 160%;
   color: #828a99;
+  grid-area: text;
+  margin-top: 10px;
+}
+.auto-img {
+  grid-area: logo;
+  width: 100%;
 }
 .marks-mobile {
   display: none;
+}
+.cards-auto-wraper {
+  margin-top: 80px;
+}
+.section.Production {
+  margin-top: 103px;
 }
 @media (max-width: 1700px) {
   html {
@@ -469,6 +492,9 @@ body {
   }
   .card {
     flex-basis: 50%;
+  }
+  .cards-auto {
+    grid-template-columns: auto auto;
   }
 }
 
@@ -631,6 +657,9 @@ body {
   .close-menu .mobile-menu-line:nth-child(3) {
     transform: rotate(-45deg) translateY(-9px);
   }
+  .cards-auto-wraper {
+    flex-direction: column;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -644,6 +673,10 @@ body {
   }
   .card {
     flex-basis: 100%;
+  }
+  .cards-auto {
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 576px) {
@@ -676,7 +709,7 @@ body {
   }
 
   .container {
-    max-width: 95%;
+    max-width: 92%;
   }
   .header {
     padding: 5.875rem 0rem 0rem 0.5rem;
@@ -728,7 +761,7 @@ body {
     margin-top: 100px;
   }
   .section-title {
-    font-size: 36px;
+    font-size: 35px;
   }
   .steps-num {
     font-size: 48px;
@@ -751,20 +784,35 @@ body {
   .marks-mobile {
     display: block;
   }
-}
-
-.section.Production {
-  margin-top: 103px;
-}
-
-.cards-auto-wraper {
-  margin-top: 80px;
-}
-
-.cards-auto {
-  width: 720px;
-  height: 280px;
-  padding: 49px;
+  .cards-auto {
+    grid-template-areas:
+      "logo title"
+      "text text";
+    padding: 30px;
+    grid-template-columns: 100px 1fr;
+    grid-column-gap: 23px;
+  }
+  .cards-auto-wraper {
+    margin-top: 52px;
+  }
+  .section.Production {
+    margin-top: 107px;
+  }
+  .seporation {
+    width: 8.375rem;
+    height: 2px;
+  }
+  .auto-text {
+    font-size: 14px;
+  }
+  .auto-img {
+    margin-bottom: 27px;
+    margin-top: 22px;
+    height: 65px;
+  }
+  .auto-title {
+    font-size: 20px;
+  }
 }
 
 .cards-auto img {
