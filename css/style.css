@@ -509,6 +509,11 @@ body {
   display: flex;
   justify-content: center;
   padding: 16px;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+.cliento-logo-iteam:hover {
+  filter: grayscale(0%);
 }
 .clients-logo {
   max-width: 100%;
