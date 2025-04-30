@@ -103,4 +103,36 @@ const swiper = new Swiper('.swiper', {
         }
       }
   });
-  
+  const swiperBlog = new Swiper('.swiper-blog', {
+    speed: 400,
+    autoHeight: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.block-button-next',
+        prevEl: '.block-button-prev',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        375: {
+          slidesPerView: 1,
+          ccenteredSlides: true,
+        },
+        576: {
+          slidesPerView: 1,
+          ccenteredSlides: true,
+          slidesOffsetBefore: 50,
+        },
+        // when window width is >= 480px
+        768: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 640px
+        1024: {
+          slidesPerView: 2,
+        },
+        1200: {
+            slidesPerView: 2,
+        }
+      }
+  });
