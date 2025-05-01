@@ -689,6 +689,7 @@ body {
   display: flex;
   align-items: start;
   gap: 10px;
+  margin-top: 42px;
 }
 .notify-icon {
   flex-shrink: 0;
@@ -709,6 +710,9 @@ body {
 
   .header-image {
     background-position: center;
+  }
+  .cta-image {
+    display: none;
   }
 }
 
@@ -737,7 +741,9 @@ body {
     margin-right: 2rem;
   }
 }
-
+.cta {
+  width: 100%;
+}
 @media (max-width: 1200px) {
   .container {
     max-width: 70rem;
@@ -934,6 +940,19 @@ body {
   .clients-wrapper {
     flex-direction: column;
   }
+  .input-group-wrapper {
+    flex-direction: column;
+  }
+  .cta-form-footer {
+    flex-direction: column;
+  }
+  .cta-button {
+    width: 100%;
+  }
+  .notify {
+    margin-top: 0;
+    min-width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -1123,6 +1142,35 @@ body {
   }
   .founder-desktop {
     display: none;
+  }
+  .cta-form {
+    max-width: 100%;
+  }
+  .notify-text {
+    min-width: 320px;
+  }
+  .section-cta {
+    padding-top: 35px;
+    padding-bottom: 50px;
+  }
+  .cta-button {
+    font-size: 14px;
+    height: 62px;
+    margin-top: 10px;
+  }
+  .cta-form-text {
+    font-size: 14px;
+    margin-top: -7px;
+    margin-bottom: 30px;
+  }
+  .input-group {
+    height: 62px;
+  }
+  .input-group-label {
+    font-size: 14px;
+  }
+  .input-group-wrapper {
+    gap: 20px;
   }
 }
 
