@@ -602,7 +602,106 @@ body {
   margin-top: 30px;
   justify-content: space-between;
 }
-
+.bg-grey {
+  background: #f0f2f2;
+}
+.section-cta {
+  position: relative;
+  padding-top: 100px;
+  margin-top: 224px;
+  padding-bottom: 100px;
+}
+.cta-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 720px;
+  width: 50%;
+}
+.cta-from-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.cta-form {
+  max-width: 840px;
+}
+.cta-form-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #828a99;
+  margin-top: 22px;
+  margin-bottom: 40px;
+  max-width: 640px;
+}
+.input-group-wrapper {
+  display: flex;
+  gap: 30px;
+}
+.input-group {
+  position: relative;
+  height: 66px;
+  flex-grow: 1;
+}
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 30px;
+  border: 1px solid #e4e4eb;
+  background-color: #f0f2f2;
+}
+.input-group-label {
+  position: absolute;
+  cursor: text;
+  top: 24px;
+  left: 31.6px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #828a99;
+  transition: top 0.2s, left 0.2s, font-size 0.2s, background-color 0.2s;
+}
+.input:focus {
+  border: 1px solid #5c8ee5;
+  outline: 0;
+}
+.input:focus ~ .input-group-label,
+.input:not(:placeholder-shown).input:not(:focus) ~ .input-group-label {
+  top: -0.5rem;
+  left: 20px;
+  font-size: 10px;
+  background-color: #f0f2f2;
+  padding: 0 10px;
+}
+.cta-form-footer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.cta-button {
+  flex-shrink: 0;
+  margin-top: 30px;
+}
+.notify {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+.notify-icon {
+  flex-shrink: 0;
+}
+.notify-text {
+  min-width: 380px;
+  margin: 0;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: #828a99;
+}
 @media (max-width: 1700px) {
   html {
     font-size: 14px;
