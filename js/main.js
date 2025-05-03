@@ -136,3 +136,33 @@ const swiper = new Swiper('.swiper', {
         }
       }
   });
+
+  const modal = document.querySelector(".modal");
+  const modalToggle = document.querySelectorAll("[data-toggle-modal]")
+  const modalClose = document.querySelector ('.modal-close')
+  console.log(modalToggle);
+  modalToggle.forEach((element)=>{
+    element.addEventListener("click", (event) => {
+      event.preventDefault();
+      modal.classList.add("is-open");
+    })
+  })
+document.querySelector('.modal').addEventListener('click', (e) => {
+  e.preventDefault()
+  e.stopPropagation()
+  if (e.target.classList.contains('is-open')) {
+    modal.classList.remove('is-open')
+  }
+})
+
+document.body.addEventListener('keyup', (e) => {
+  if (e.key === 'Escape') {
+    modal.classList.remove('is-open')
+  }
+})
+
+modalClose.addEventListener("click", (event) => {
+  event.preventDefault();
+  modal.classList.remove('is-open')
+})
+
