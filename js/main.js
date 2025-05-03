@@ -2,14 +2,19 @@ const navbar = document.querySelector(".navbar")
 const logo = document.querySelector(".logo-svg use")
 const mMenuToggle = document.querySelector(".mobile-menu-toggle")
 const menu = document.querySelector(".mobile-menu")
+const isFront = document.body.classList.contains("front-page")
 
 function lightModeOn() {
     navbar.classList.add("navbar-light")
-    logo.href.baseVal = "img/icons.svg#logo-black";
+    
 }
 function lightModeOff() {
     navbar.classList.remove("navbar-light")
-    logo.href.baseVal = "img/icons.svg#logo-light";
+    
+}
+
+const changeNavHeight = (height) => {
+  navbar.style.height = height;
 }
 
 function openMenu() { 
@@ -25,7 +30,10 @@ function closeMenu() { //функция закрывания меню/
     lightModeOff();
 }
 window.addEventListener("scroll", () => {
-this.scrollY >1 ? lightModeOn () : lightModeOff ();
+this.scrollY >1 ? changeNavHeight ('4.5rem') : changeNavHeight ('5.875rem');
+if (isFront) {
+  this.scrollY >1 ? lightModeOn () : lightModeOff ();
+}
 
 })
 mMenuToggle.addEventListener("click", (event) => {
