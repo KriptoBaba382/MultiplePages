@@ -2,7 +2,7 @@
     <div class="bg-grey section-cta">
       <img src="img/cta.png" alt="call to action" class="cta-image">
       <div class="cta-from-wrapper container">
-        <form action="handler.php" class="cta-form">
+        <form action="handler.php" method="POST" class="cta-form">
           <h2 class="section-title cta-form-title">Хотите сотрудничать?
           </h2>
           <p class="cta-form-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все
