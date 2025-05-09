@@ -697,6 +697,19 @@ body {
   background-color: inherit;
   padding: 0 10px;
 }
+.input.is-invalid {
+  border: 1px solid red;
+}
+.just-validate-error-label {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  background-color: inherit;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.8rem;
+  transform: translateY(-50%);
+}
 .cta-form-footer {
   display: flex;
   gap: 30px;
