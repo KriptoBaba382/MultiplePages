@@ -148,13 +148,24 @@ const swiper = new Swiper('.swiper', {
   const modal = document.querySelector(".modal");
   const modalToggle = document.querySelectorAll("[data-toggle-modal]")
   const modalClose = document.querySelector ('.modal-close')
-  console.log(modalToggle);
+  const alertModal = document.querySelector ('#alert-modal')
+  const alertModalButton = document.querySelector ('#alert-modal-button')
+  const alertModalClose = document.querySelector ('#alert-modal-close')
+  alertModalClose.addEventListener("click", ()=>{
+    alertModal.classList.remove('is-open');
+    modal.classList.remove('is-open');
+  })
+  alertModalButton.addEventListener("click", () => {
+    alertModal.classList.add("is-open");
+  })
+  console.log(modalToggle);   
   modalToggle.forEach((element)=>{
     element.addEventListener("click", (event) => {
       event.preventDefault();
       modal.classList.add("is-open");
     })
   })
+
 document.querySelector('.modal').addEventListener('click', (e) => {
   e.preventDefault()
   e.stopPropagation()
@@ -162,6 +173,7 @@ document.querySelector('.modal').addEventListener('click', (e) => {
     modal.classList.remove('is-open')
   }
 })
+
 
 document.body.addEventListener('keyup', (e) => {
   if (e.key === 'Escape') {

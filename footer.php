@@ -136,7 +136,7 @@
       </div>
     </div>
   </footer>
-  <div class="modal">
+  <div class="modal" id="fedback-modal">
     <div class="modal-dialog">
       <h2 class="modal-title">Есть вопросы?</h2>
       <a href="#" class="modal-close"> <svg class="clode-icon" width="24" height="24">
@@ -156,7 +156,7 @@
           </div>
         </div>
         <div class="modal-form-footer">
-          <button type="submit" class="button modal-form-button">Отправить заявку</button>
+          <button type="submit" class="button modal-form-button" id="alert-modal-button">Отправить заявку</button>
           <div class="notify">
             <svg class="notify-icon" width="14" height="14">
               <use href="img/icons.svg#scheld"></use>
@@ -166,6 +166,18 @@
           </div>
         </div>
       </form>
+    </div>
+  </div>
+   <div class="modal" id="alert-modal" >
+    <div class="modal-dialog" >
+      <img src="./img/thanks_illu.svg" alt="Thanks" >
+      <h2 class="modal-title" style="font-weight:600; margin-top:30px">Спасибо за заявку!</h2>
+      <a href="#" class="modal-close" id="alert-modal-close"> <svg class="clode-icon" width="24" height="24" >
+          <use href="img/icons.svg#close"></use>
+        </svg></a>
+      <p class="modal-text">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие
+        вопросы и поможем даже в самых сложных случаях!</p>
+        <a href='/' class="button modal-form-button alert-button" style="margin-bottom:0">Вернуться на главную</a> 
     </div>
   </div>
   <script src="js/swiper-bundle.min.js"></script>
